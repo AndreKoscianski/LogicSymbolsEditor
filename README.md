@@ -1,5 +1,7 @@
 # LogicSymbolsEditor
 
+## Description 
+
 A simple story for which I sought a simple answer.
 
 I began preparing a course on logic for computer science.
@@ -17,3 +19,7 @@ Lyx is not bad, but we're still too far from .docx. As I said, WYSIWYG.
 I resort to programming string-replacement in a Lazarus Memo. That's roughly 15 minutes of programming.
 
 I'm using Linux; if I had Windoes+Office+macros, maybe I could've done it differently...
+
+## Compiling
+
+Download de files, open the project in Lazarus, compile.

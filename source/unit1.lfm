@@ -1,0 +1,82 @@
+object Form1: TForm1
+  Left = 81
+  Height = 443
+  Top = 164
+  Width = 633
+  Caption = 'Form1'
+  ClientHeight = 443
+  ClientWidth = 633
+  LCLVersion = '1.8.2.0'
+  object M: TMemo
+    Left = 16
+    Height = 396
+    Top = 28
+    Width = 520
+    Font.Height = -19
+    Font.Name = 'Sans'
+    Lines.Strings = (
+      ''
+      'digite  *  para obter ∧'
+      '+  ∨'
+      '-  ¬'
+      '>  →'
+      '<  ↔'
+      '_  ⊦'
+      '=  ⊨'
+    )
+    OnChange = MChange
+    OnKeyUp = MKeyUp
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 543
+    Height = 19
+    Top = 8
+    Width = 84
+    Caption = '*+- >< _='
+    Font.Height = -16
+    Font.Name = 'Sans'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 544
+    Height = 36
+    Top = 40
+    Width = 75
+    Caption = 'Trocar!'
+    Font.Height = -16
+    Font.Name = 'Sans'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 544
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'Abrir'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 544
+    Height = 25
+    Top = 152
+    Width = 75
+    Caption = 'Salvar'
+    OnClick = Button3Click
+    TabOrder = 3
+  end
+  object OpenDialog1: TOpenDialog
+    left = 564
+    top = 201
+  end
+  object SaveDialog1: TSaveDialog
+    left = 564
+    top = 264
+  end
+end

@@ -15,12 +15,14 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     M: TMemo;
     OpenDialog1: TOpenDialog;
     SaveDialog1: TSaveDialog;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure MChange(Sender: TObject);
     procedure MKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -55,11 +57,17 @@ begin
     M.Lines.Text := StringReplace(M.Lines.Text,'*', '∧', [rfReplaceAll]);
     M.Lines.Text := StringReplace(M.Lines.Text,'+', '∨', [rfReplaceAll]);
     M.Lines.Text := StringReplace(M.Lines.Text,'-', '¬', [rfReplaceAll]);
+
+    M.Lines.Text := StringReplace(M.Lines.Text,'<=>', '⇔', [rfReplaceAll]);
+    M.Lines.Text := StringReplace(M.Lines.Text,'=>', '⇒', [rfReplaceAll]);
+
+    M.Lines.Text := StringReplace(M.Lines.Text,'<>', '↔', [rfReplaceAll]);
     M.Lines.Text := StringReplace(M.Lines.Text,'>', '→', [rfReplaceAll]);
-    M.Lines.Text := StringReplace(M.Lines.Text,'<', '↔', [rfReplaceAll]);
+
+
     M.Lines.Text := StringReplace(M.Lines.Text,'_', '⊥', [rfReplaceAll]);
-    M.Lines.Text := StringReplace(M.Lines.Text,'|', '⊦', [rfReplaceAll]);
-    M.Lines.Text := StringReplace(M.Lines.Text,'=', '⊨', [rfReplaceAll]);
+    M.Lines.Text := StringReplace(M.Lines.Text,'|=', '⊨', [rfReplaceAll]);
+    M.Lines.Text := StringReplace(M.Lines.Text,'|-', '⊦', [rfReplaceAll]);
 
 end;
 
@@ -73,6 +81,18 @@ procedure TForm1.Button3Click(Sender: TObject);
 begin
   if SaveDialog1.Execute then
     M.Lines.SaveToFile(SaveDialog1.FileName);
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+  ShowMessage ('Type text and expressions; press DoIt' + sLineBreak +
+               ' to perform symbol substitution '   + sLineBreak + sLineBreak +
+               '+ ∨     * ∧       -  ¬' + sLineBreak + sLineBreak +
+               '>  →    conditional' + sLineBreak +
+               '<>  ↔   biconditional' + sLineBreak +
+               '_   ⊥   falsum' + sLineBreak + sLineBreak +
+               '=>  ⇒        <=> ⇔' + sLineBreak + sLineBreak +
+               '}   ⊦         }}  ⊨');
 end;
 
 procedure TForm1.Label1Click(Sender: TObject);

@@ -3,7 +3,9 @@ object Form1: TForm1
   Height = 443
   Top = 164
   Width = 633
-  Caption = 'Silly,Small Logic Symbols Editor'
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Logic Symbols Typing Helper'
   ClientHeight = 443
   ClientWidth = 633
   Icon.Data = {
@@ -2131,17 +2133,6 @@ object Form1: TForm1
     Width = 520
     Font.Height = -19
     Font.Name = 'Sans'
-    Lines.Strings = (
-      ''
-      'digite  *  para obter ∧'
-      '+  ∨'
-      '-  ¬'
-      '>  →'
-      '<  ↔'
-      '|  ⊦'
-      '=  ⊨'
-      '_ ⊥'
-    )
     OnChange = MChange
     OnKeyUp = MKeyUp
     ParentFont = False
@@ -2151,9 +2142,9 @@ object Form1: TForm1
   object Button1: TButton
     Left = 544
     Height = 36
-    Top = 40
+    Top = 32
     Width = 75
-    Caption = 'Trocar!'
+    Caption = 'Do it!'
     Font.Height = -16
     Font.Name = 'Sans'
     OnClick = Button1Click
@@ -2163,27 +2154,45 @@ object Form1: TForm1
   object Button2: TButton
     Left = 544
     Height = 25
-    Top = 120
+    Top = 88
     Width = 75
-    Caption = 'Abrir'
+    Caption = 'Open'
+    Font.Height = -16
+    Font.Name = 'Sans'
     OnClick = Button2Click
+    ParentFont = False
     TabOrder = 2
   end
   object Button3: TButton
     Left = 544
     Height = 25
-    Top = 152
+    Top = 128
     Width = 75
-    Caption = 'Salvar'
+    Caption = 'Save'
+    Font.Height = -16
+    Font.Name = 'Sans'
     OnClick = Button3Click
+    ParentFont = False
     TabOrder = 3
+  end
+  object Button4: TButton
+    Left = 544
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = 'Help'
+    Font.Height = -16
+    Font.Name = 'Sans'
+    OnClick = Button4Click
+    ParentFont = False
+    TabOrder = 4
   end
   object OpenDialog1: TOpenDialog
     left = 564
-    top = 201
+    top = 296
   end
   object SaveDialog1: TSaveDialog
     left = 564
-    top = 264
+    top = 336
   end
 end

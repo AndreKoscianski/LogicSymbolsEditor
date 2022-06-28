@@ -1,25 +1,25 @@
-# LogicSymbolsEditor
+# LogicSymbolsThyperHelper
 
 ## Description 
 
-A simple story for which I sought a simple answer.
+As the name says! 
 
-I began preparing a course on logic for computer science.
+I had to type text using logic symbols, such as 
+  ∨ ∧ ¬  →   ⊦  ⊨
 
-Besides taking notes and planning the lessons, I also needed to create lists of exercises. 
-The course deals with deductions and propositional logic, and there the trouble begins. 
-This branch of mathematics uses a number of symbols that are not usual: 
+This is the crude solution I choose: to program a memo field, using Lazarus, with a button-activated-replacement procedure. For instance, * stands for ∧. Later, I transfer the result to a word processor. <sub>*(A keyboard hook with instant-replacement would be prettier, but it's platform-dependent, oh, spare me)*</sub>
 
-  ∨ ∧ ¬  →  ↔  ⊦  ⊨
-
-There is Latex, but Holy Cow, the year is 2022 and normal people uses WYSIWYG.
-Then we have tools as KLatex to create formula, but generating images and inserting in a word processor is cumbersome.
-Lyx is not bad, but we're still too far from .docx. As I said, WYSIWYG.
-
-I resort to programming string-replacement in a Lazarus Memo. That's roughly 15 minutes of programming.
-
-I'm using Linux; if I had Windoes+Office+macros, maybe I could've done it differently...
+Some alternatives are:
+- learn Latex and its commands, like \rightarrow;
+- use an equation editor in word processors like Microsoft Word;
+- program shortcuts, again in a word processor;
+- use KLatexFormula, and paste images in your text;
+- use Lyx;
+- paper - pen - photograph;
+- forget the whole thing.
 
 ## Compiling
 
-Download de files, open the project in Lazarus, compile.
+Download, open the project in Lazarus, compile.
+
+Free code, no guarantees of correct or incorrect functioning ⊦ a pretty logical statement (bazinga).

@@ -1,4 +1,4 @@
-# LogicSymbolsThyperHelper
+# LogicSymbolsTyperHelper
 
 ## Description 
 
